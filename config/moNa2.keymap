@@ -41,6 +41,13 @@
 
             tap-ms = <20>;
         };
+        zoom_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc LC(SCRL_UP)>, <&msc LC(SCRL_DOWN)>;
+
+            tap-ms = <20>;
+        };
         scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
