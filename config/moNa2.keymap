@@ -41,13 +41,6 @@
 
             tap-ms = <20>;
         };
-        zoom_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc LC(SCRL_UP)>, <&msc LC(SCRL_DOWN)>;
-
-            tap-ms = <20>;
-        };
         scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -79,7 +72,7 @@
 &trans                                                    &trans               &trans         &trans             &trans      &trans                                 &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>, <&scroll_left_right>;
+            sensor-bindings = <&inc_dec_kp LC(PLUS) LC(MINUS)>, <&scroll_left_right>;
         };
 
         layer_2 {
@@ -90,7 +83,7 @@
 &trans                                    &trans        &trans        &trans       &kp RIGHT_SHIFT  &kp BACKSPACE                                                              &kp PIPE
             >;
 
-            sensor-bindings = <&zoom_up_down>, <&scroll_left_right>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>, <&scroll_left_right>;
         };
 
         layer_3 {
